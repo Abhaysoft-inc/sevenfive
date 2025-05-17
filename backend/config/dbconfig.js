@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 
 dotenv.config()
 
-
 const pgp = pgpPromise()
 const db = pgp(process.env.DB_URL)
 
