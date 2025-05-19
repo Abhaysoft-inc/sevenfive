@@ -13,6 +13,6 @@ app.use('/user', router);
 app.use('/subjects', subjectRouter);
 
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log("backend is running on port: 3000")
 })

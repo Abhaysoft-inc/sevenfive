@@ -17,6 +17,19 @@ subjectRouter.get('/:branch/:semester', (async (req, res) => {
     });
 
 
+}));
+
+subjectRouter.get('/', (async (req, res) => {
+    const query = await db.query(`
+        SELECT sub.subject_id, sub.subject_name, sub.code
+        FROM Subject sub
+        JOIN Semester sem ON sub.semester_id = sem.semester_id
+        
+        
+        `).then((data) => {
+        res.send(data);
+    })
+
 }))
 
 export default subjectRouter;
